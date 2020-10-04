@@ -103,7 +103,11 @@ func csvParse() []Team {
 		playerCityTeam := strings.Split(record[6], " ")
 
 		for i, val := range teamList {
-			if val.City == playerCityTeam[0] {
+			nameIdx := 1
+			if len(playerCityTeam) == 3 {
+				nameIdx = 2
+			}
+			if val.Name == playerCityTeam[nameIdx] {
 				teamList[i].PlayerList = append(teamList[i].PlayerList, player)
 			}
 		}
