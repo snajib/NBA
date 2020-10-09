@@ -139,31 +139,6 @@ func main() {
 	}
 	collection := client.Database("NBA").Collection("Team")
 
-	////////
-
-	// Listing available databases
-	// databases, err := client.ListDatabaseNames(ctx, bson.M{})
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// Inserting one team
-	// creating example player and team
-	// cp3 := Player{Fname: "Chris", Lname: "Paul", Number: 3, PositionList: []string{"PG"}}
-	// thunder := Team{
-	// 	Name:         "Thunder",
-	// 	City:         "Oklahoma City",
-	// 	Abbreviation: "OKC",
-	// 	PlayerList:   []Player{cp3},
-	// }
-
-	// insRes, err := collection.InsertOne(context.TODO(), thunder)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// fmt.Println("Inserted document: ", insRes.InsertedID)
-
 	// insert many teams
 	teamList := csvParse()
 
